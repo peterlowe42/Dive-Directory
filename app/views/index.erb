@@ -1,9 +1,43 @@
+<div id="search-options">
+  <h3>Search by Location</h3>
+  <form action="/divesites" method="get">
+    <input type="text" name='location' placeholder='Location'>
 
-<a id="return-stuff" href="/divesites">Find Sites near me</a>
+    <input type='submit'>
+  </form>
+</div>
 
-<h3>Search by Location</h3>
-<form action="/divesites" method="get">
-  <input type="text" name='lat' placeholder='Latitude'>
-  <input type="text" name='long' placeholder='Longitude'>
-  <input type='submit'>
-</form>
+
+<% if @lat && @lng%>
+
+<div id= "site-div">
+<h2>Dive sites near <%= @location%></h2>
+<% @site_data.each do |site|%>
+  <h3><a href="/divesites/"><%=site['name']%></a></h3>
+  <h4>Distance from location:</h4>
+  <p><%=site['distance']%>  nautical miles</p>
+  <h4>Coordinates:</h4>
+  <p>Latitude: <%=site['lat']%></p>
+  <p>Longitude: <%=site['lng']%></p>
+
+<%end%>
+</div>
+<div id="map">
+</div>
+
+<script type="text/javascript">
+  function initMap(){
+    var mapDiv = document.getElementById('map');
+    var map = new google.maps.Map(mapDiv, {
+      center: { lat:<%=@lat%>, lng:<%=@lng%>},
+      zoom: 8
+    });
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+         async defer></script>
+<%end%>
+
+
+
+

@@ -23,6 +23,7 @@ require 'erb'
 require 'httparty'
 
 require 'json'
+require 'geocoder'
 enable :sessions
 
 # Some helper constants for path-centric logic

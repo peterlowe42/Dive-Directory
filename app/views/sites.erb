@@ -1,8 +1,7 @@
-<% if @location %>
-<h2>Dive sites near <%= @location %></h2>
-<%else%>
-<h2>Dive Sites Near You</h2>
-<% end%>
+
+<% if @lat && @lng%>
+<h2>Dive sites near <%= "#{@lat}, #{@lng}"%></h2>
+
 <% @site_data.each do |site|%>
 <div id= "site-div">
   <h3>Site Name: <%=site['name']%></h3>
@@ -14,7 +13,19 @@
 
 </div>
 <%end%>
+<%end%>
 
-<iframe width="600" height="450" frameborder="0" style="border:0"
-src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ53AuMsChVTARQVNuu1Tz1Yo&key=" allowfullscreen></iframe>
+<div id="map">
+</div>
+<script type="text/javascript">
+  function initMap(){
+    var mapDiv = document.getElementById('map');
+    var map = new google.maps.Map(mapDiv, {
+      center: { lat:<%=@lat%>, lng:<%=@lng%>},
+      zoom: 8
+    });
 
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+         async defer></script>

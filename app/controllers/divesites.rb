@@ -1,14 +1,13 @@
 get '/divesites' do
-  if (params[:lat] && params[:long])
-    resp = HTTParty.get(generate_url(params[:lat],params[:long])).to_json
-    @location = "#{params[:lat].to_s}, #{params[:long].to_s}"
-    p @location
-  else
-    resp = HTTParty.get('http://api.divesites.com').to_json
-  end
-  site_hash = JSON.parse(resp)
-  @site_data = site_hash['sites']
 
-    erb :sites
+    coords = Geocoder.coordinates(params[:location])
+    resp = HTTParty.get(generate_url(coords[0],coords[1])).to_json
 
+
+  data_hash = JSON.parse(resp)
+  @site_data = data_hash['sites']
+  check_and_update_db(@site_data)
+  @lat = data_hash['request']['loc']['lat']
+  @lng = data_hash['request']['loc']['lng']
+  erb :index
 end

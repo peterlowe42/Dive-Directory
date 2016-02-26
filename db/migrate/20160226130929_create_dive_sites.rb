@@ -2,10 +2,11 @@ class CreateDiveSites < ActiveRecord::Migration
   def change
     create_table :dive_sites do |t|
       t.string :name
-      t.string :lat
-      t.string :long
-      t.integer :min_depth
+      t.decimal :latitude
+      t.decimal :longitude
       t.integer :max_depth
+      t.integer :min_depth
+      t.string :source_id
 
       t.timestamps
     end
