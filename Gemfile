@@ -16,6 +16,12 @@ gem 'bcrypt'
 
 gem 'shotgun'
 
+gem 'httparty'
+
+gem 'json'
+
+gem 'geocoder'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
