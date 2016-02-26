@@ -1,0 +1,20 @@
+<% if @location %>
+<h2>Dive sites near <%= @location %></h2>
+<%else%>
+<h2>Dive Sites Near You</h2>
+<% end%>
+<% @site_data.each do |site|%>
+<div id= "site-div">
+  <h3>Site Name: <%=site['name']%></h3>
+  <h4>Distance from location:</h4>
+  <p><%=site['distance']%>  nautical miles</p>
+  <h4>Coordinates:</h4>
+  <p>Latitude: <%=site['lat']%></p>
+  <p>Longitude: <%=site['lng']%></p>
+
+</div>
+<%end%>
+
+<iframe width="600" height="450" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ53AuMsChVTARQVNuu1Tz1Yo&key=" allowfullscreen></iframe>
+

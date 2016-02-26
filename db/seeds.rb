@@ -8,3 +8,4 @@ require 'faker'
     username: Faker::Name.name
   )
 end
+
