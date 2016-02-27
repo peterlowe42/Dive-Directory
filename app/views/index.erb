@@ -13,7 +13,7 @@
 <div id= "site-div">
 <h2>Dive sites near <%= @location%></h2>
 <% @site_data.each do |site|%>
-  <h3><a href="/divesites/"><%=site['name']%></a></h3>
+  <h3><a href="/divesites/<%=site['id']%>"><%=site['name']%></a></h3>
   <h4>Distance from location:</h4>
   <p><%=site['distance']%>  nautical miles</p>
   <h4>Coordinates:</h4>

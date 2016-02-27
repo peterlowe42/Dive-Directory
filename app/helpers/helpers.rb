@@ -5,5 +5,17 @@ helpers do
   end
 
   def check_and_update_db(site_data)
+    location_sites = []
+    site_data.each do |site|
+      dive_site = DiveSite.find_by(source_id:site['id'])
+      if dive_site == nil
+        new_site = DiveSite.create(name:site['name'], longitude:site['lng'].to_f, latitude:site['lat'].to_f, source_id:site['id'])
+        location_sites << new_site
+      else
+        location_sites << dive_site
+      end
+    end
+    return location_sites
   end
+
 end
