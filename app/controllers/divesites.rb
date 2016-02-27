@@ -7,7 +7,13 @@ get '/divesites' do
   data_hash = JSON.parse(resp)
   @site_data = data_hash['sites']
   check_and_update_db(@site_data)
+
   @lat = data_hash['request']['loc']['lat']
   @lng = data_hash['request']['loc']['lng']
   erb :index
+end
+
+get "/divesites/:source_id" do
+  @divesite = DiveSite.find_by(source_id: params[:source_id])
+  erb :'divesites/show'
 end
