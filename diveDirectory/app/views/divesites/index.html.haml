@@ -1,0 +1,31 @@
+#search-options
+  %h3 Search by Location
+  %form{:action => "/divesites", :method => "get"}
+    %input{:name => "location", :placeholder => "Location", :type => "text"}
+      %input{:type => "submit"}
+- if @lat && @lng
+  #site-div
+    %h2
+      Dive sites near #{@location}
+    - @site_data.each do |site|
+      %h3
+        %a{:href => "/divesites/#{site['id']}"}= site['name']
+      %h4 Distance from location:
+      %p
+        = site['distance']
+        nautical miles
+      %h4 Coordinates:
+      %p
+        Latitude: #{site['lat']}
+      %p
+        Longitude: #{site['lng']}
+  #map
+  :javascript
+    function initMap(){
+      var mapDiv = document.getElementById('map');
+      var map = new google.maps.Map(mapDiv, {
+        center: { lat:@lat, lng:@lng},
+        zoom: 8
+      });
+    }
+  %script{:async => "", :defer => "", :src => "https://maps.googleapis.com/maps/api/js?callback=initMap"}
