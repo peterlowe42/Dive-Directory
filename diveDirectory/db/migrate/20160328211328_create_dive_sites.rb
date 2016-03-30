@@ -1,4 +1,4 @@
-class CreateDiveSites < ActiveRecord::Migration
+class CreateDivesites < ActiveRecord::Migration
   def change
     create_table :dive_sites do |t|
       t.string :site_name
