@@ -1,1 +1,2 @@
-locations_controller.rb
+class LocationsController < ApplicationController
+end

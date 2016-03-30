@@ -1,5 +1,5 @@
 class DivesitesController < ApplicationController
-  include DiveSitesHelper
+  include DivesitesHelper
   
   def index
     if params[:location]

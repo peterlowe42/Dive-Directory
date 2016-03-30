@@ -1,4 +1,4 @@
-module DiveSitesHelper
+module DivesitesHelper
 
   def generate_url(lat,long)
     return "http://api.divesites.com/?mode=sites&lat=#{lat}&lng=#{long}&dist=25"

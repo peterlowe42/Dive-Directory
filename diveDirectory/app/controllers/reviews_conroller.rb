@@ -1,1 +1,2 @@
-reviews_conroller.rb
+class ReviewsController < ApplicationController
+end
