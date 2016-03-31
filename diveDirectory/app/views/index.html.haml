@@ -8,6 +8,7 @@
   - if @lat && @lng
     #site-div
       %h2
+        = @result
         Dive sites near #{@location}
       - @site_data.each do |site|
         %h3

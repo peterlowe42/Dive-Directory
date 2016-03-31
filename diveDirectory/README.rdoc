@@ -1,28 +1,14 @@
-== README
+# Dive Directory
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+Dive Directory is an open scource web app for SCUBA divers to find and review divesites worldwide. 
 
-* Ruby version
+## User Stories
+ A user can input a location and see a list of divesites near that location. 
 
-* System dependencies
+ A user can see reviews of a divesite
 
-* Configuration
+ A user can add a review to a divesite
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+ A user can vote on a review (once per review)
