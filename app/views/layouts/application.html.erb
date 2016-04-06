@@ -36,30 +36,36 @@
             <% end %>
 
           </ul>
+          <form action="/divesites"  method="get" class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input name="location" type="text" class="form-control" placeholder="Search by Location">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
         </div><!-- /.navbar-collapse -->
       </nav>
 
     </header>
-    <%= yield %>
     <script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers([
-        {
-          "lat": 0,
-          "lng": 0,
-          "picture": {
-            "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
-            "width":  32,
-            "height": 32
-          },
-          "infowindow": "hello!"
-        }
-        ]);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers([
+      {
+        "lat": 0,
+        "lng": 0,
+        "picture": {
+          "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+          "width":  32,
+          "height": 32
+        },
+        "infowindow": "hello!"
+      }
+      ]);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
     </script>
+    <%= yield %>
     <script src="//maps.google.com/maps/api/js?v=3.18&sensor=false&client=&key=&libraries=geometry&language=&hl=&region="></script> 
     <script src="//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js"></script>
   </body>

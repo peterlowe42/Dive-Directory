@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20160406190045) do
 
+  create_table "divesite_locations", force: :cascade do |t|
+    t.integer  "divesite_id"
+    t.integer  "location_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "divesites", force: :cascade do |t|
     t.string   "site_name"
     t.string   "lat"
@@ -24,14 +31,7 @@ ActiveRecord::Schema.define(version: 20160406190045) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "divesites_locations", force: :cascade do |t|
-    t.integer  "divesite_id"
-    t.integer  "location_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "locaitons", force: :cascade do |t|
+  create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.string   "lat"
     t.string   "lng"
