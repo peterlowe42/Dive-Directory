@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330210326) do
+ActiveRecord::Schema.define(version: 20160405225542) do
 
   create_table "dive_sites", force: :cascade do |t|
     t.string   "site_name"
@@ -56,6 +56,12 @@ ActiveRecord::Schema.define(version: 20160330210326) do
     t.string   "last_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.boolean "up"
+    t.integer "votable_id"
+    t.string  "votable_type"
   end
 
 end
