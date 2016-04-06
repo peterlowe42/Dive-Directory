@@ -7,9 +7,9 @@ module DivesitesHelper
   def check_and_update_db(site_data)
     location_sites = []
     site_data.each do |site|
-      dive_site = Divesite.find_by(source_id:site['id'])
+      dive_site = Divesite.where(source_id:site['id'])[0]
       if dive_site == nil
-        new_site = Divesite.create(name:site['name'], longitude:site['lng'].to_f, latitude:site['lat'].to_f, source_id:site['id'])
+        new_site = Divesite.create(site_name:site['name'], lng:site['lng'], lat:site['lat'], source_id:site['id'])
         location_sites << new_site
       else
         location_sites << dive_site

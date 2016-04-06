@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160405225542) do
+ActiveRecord::Schema.define(version: 20160406190045) do
 
-  create_table "dive_sites", force: :cascade do |t|
+  create_table "divesites", force: :cascade do |t|
     t.string   "site_name"
     t.string   "lat"
     t.string   "lng"
+    t.string   "source_id"
     t.integer  "max_depth"
     t.integer  "min_depth"
     t.datetime "created_at", null: false
