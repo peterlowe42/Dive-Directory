@@ -1,4 +1,7 @@
 <div class="container">
+  <% if @errors %>
+  <%= @errors %>
+  <% end %>
   <div class= "col-md-4">
     <%= form_for (@user) do |f| %>
       <%= f.label :'First Name' %><br>
@@ -10,7 +13,7 @@
       <%= f.label :Email %><br>
       <%= f.text_field :email %><br>
       <%= f.label :Password %><br>
-      <%= f.text_field :password_hash %><br>
+      <%= f.text_field :password %><br>
       <%= f.label :'Password Confirmation' %><br>
       <%= f.text_field :password_confirmation %>
       <%= f.submit 'Create Account' %>
