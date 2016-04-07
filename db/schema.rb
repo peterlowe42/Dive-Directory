@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160406190045) do
   create_table "divesite_locations", force: :cascade do |t|
     t.integer  "divesite_id"
     t.integer  "location_id"
+    t.string   "distance"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

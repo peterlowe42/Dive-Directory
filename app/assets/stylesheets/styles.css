@@ -1,6 +1,16 @@
 #site-div {
-  position: absolute;
-  top:50px;
-  max-width: 30%;
+  height:750px;
   background-color: #0E417F;
 }
+
+#map {
+  width: 100%;
+  height: 750px;
+}
+
+.site-list {
+  list-style: none;
+}
+
+
+

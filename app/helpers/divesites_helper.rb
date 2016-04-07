@@ -12,11 +12,11 @@ module DivesitesHelper
       site_data.each do |site|
         dive_site = Divesite.where(source_id:site['id'])[0]
         if dive_site == nil
-          new_site = Divesite.create(site_name:site['name'], lng:site['lng'], lat:site['lat'], source_id:site['id'])
-          loc.divesites << new_site
-        else
-          loc.divesites << dive_site
+          dive_site = Divesite.create(site_name:site['name'], lng:site['lng'], lat:site['lat'], source_id:site['id'])
         end
+        loc.divesites << dive_site
+        sitelocation = DivesiteLocation.find_by(divesite_id: dive_site.id, location_id: loc.id)
+        sitelocation.update(distance: site['distance'])
       end
       return loc
     end
