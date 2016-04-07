@@ -1,0 +1,19 @@
+<div class="container">
+  <div class= "col-md-4">
+    <%= form_for (@user) do |f| %>
+      <%= f.label :'First Name' %><br>
+      <%= f.text_field :first_name%><br>
+      <%= f.label :'Last Name' %><br>
+      <%= f.text_field :last_name %><br>
+      <%= f.label :Username %><br>
+      <%= f.text_field :username %><br>
+      <%= f.label :Email %><br>
+      <%= f.text_field :email %><br>
+      <%= f.label :Password %><br>
+      <%= f.text_field :password_hash %><br>
+      <%= f.label :'Password Confirmation' %><br>
+      <%= f.text_field :password_confirmation %>
+      <%= f.submit 'Create Account' %>
+    <% end %>
+  </div>
+</div>
