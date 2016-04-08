@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   validates :username, { presence: :true, uniqueness: :true }
   validates :email, { presence: :true, uniqueness: :true }
   validates :password_hash, { presence: true }
-   validates_confirmation_of :password
+  validates_confirmation_of :password 
   attr_accessor :password_confirmation
   attr_accessor :password
 

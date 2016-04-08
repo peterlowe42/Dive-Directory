@@ -1,1 +1,30 @@
-show.html.haml
+<div class= "container">
+  <div class"page-header">
+  </div>
+  <div class="row">
+    <div class="panel panel-default col-md-5 site-data">
+      <div class="panel-heading"> <h2><%= @divesite.site_name %></h2> </div>
+      <div class="panel-body">
+        <h4>Latitude: <%= @divesite.lat %> </h4>
+        <h4>Longitude: <%= @divesite.lng %> </h4>
+        <h4>Max Depth: <%= @divesite.max_depth %> </h4>
+        <h4>Min Depth: <%= @divesite.min_depth %> </h4>
+      </div>
+    </div>
+    <div class="col-md-1"> </div>
+    <div class="panel panel-default col-md-7 small-map">
+      <div id="map-small"></div>
+    </div>
+    <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {
+        disableDefaultUI: true
+      }, internal: {id: 'map-small'}}, function(){
+        markers = handler.addMarkers(<%=raw @hash.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    </script>
+
+  </div>
+</div>
