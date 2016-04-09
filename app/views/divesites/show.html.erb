@@ -2,7 +2,7 @@
   <div class"page-header">
   </div>
   <div class="row">
-    <div class="panel panel-default col-md-5 site-data">
+    <div class="panel panel-default col-md-4 site-data">
       <div class="panel-heading"> <h2><%= @divesite.site_name %></h2> </div>
       <div class="panel-body">
         <h4>Latitude: <%= @divesite.lat %> </h4>
@@ -11,9 +11,31 @@
         <h4>Min Depth: <%= @divesite.min_depth %> </h4>
       </div>
     </div>
-    <div class="col-md-1"> </div>
-    <div class="panel panel-default col-md-7 small-map">
+    <div class="panel panel-default col-md-6 small-map">
       <div id="map-small"></div>
+    </div>
+    <div class="row">
+      <div class='col-md-12'>
+        <h2>Reviews</h2>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <% if @divesite.reviews == [] %>
+        <h4> This Divesite currently has no reviews</h4>
+      <% else %>
+        <% @divesite.reviews.each do |review| %>
+         <div class="row">
+           <div class="col-md-2">
+             <p> <%= review.user.username %> </p>
+           </div>
+           <div class="col-md-10 panel panel-default">
+             <h4> <%= review.title %> </h4>
+             <p> <%= review.body %> </p>
+           </div>
+         </div>
+        <% end %>
+      <% end %>
+      <%= link_to 'Add Review', new_divesite_review_path(@divesite) %>
     </div>
     <script type="text/javascript">
       handler = Gmaps.build('Google');
