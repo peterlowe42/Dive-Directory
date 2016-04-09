@@ -20,5 +20,13 @@ class DivesitesController < ApplicationController
     end
   end
 
+  def show
+    @divesite = Divesite.find_by(id: params[:id])
+     @hash = Gmaps4rails.build_markers(@divesite) do |site, marker|
+        marker.lat site.lat
+        marker.lng site.lng
+      end
+  end
+
 end
 
