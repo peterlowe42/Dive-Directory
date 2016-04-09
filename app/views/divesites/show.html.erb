@@ -16,7 +16,7 @@
     </div>
   </div>
   
-  <!-- <div class="row"> -->
+  <div class="row">
     <div class="panel panel-default col-md-12">
       <div class="panel-heading">
        <h2>Reviews</h2> 
@@ -42,18 +42,18 @@
         <% end %>
             <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
       <% end %>
-    <script type="text/javascript">
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {
-      disableDefaultUI: true
-    }, internal: {id: 'map-small'}}, function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
-    </script>
 
     </div>
-  <!-- </div>   -->
+  </div>  
 
 </div>
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {
+   scrollwheel: false,
+  zoom:10
+}, internal: {id: 'map-small'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.map.centerOn({ lat: <%= @divesite.lat %>, lng: <%= @divesite.lng %> })
+});
+</script>

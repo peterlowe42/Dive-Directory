@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160406190045) do
+ActiveRecord::Schema.define(version: 20160409201150) do
 
   create_table "divesite_locations", force: :cascade do |t|
     t.integer  "divesite_id"
     t.integer  "location_id"
     t.string   "distance"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "divesites", force: :cascade do |t|
@@ -28,16 +28,17 @@ ActiveRecord::Schema.define(version: 20160406190045) do
     t.string   "source_id"
     t.integer  "max_depth"
     t.integer  "min_depth"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "locations", force: :cascade do |t|
     t.string   "name"
     t.string   "lat"
     t.string   "lng"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -46,24 +47,35 @@ ActiveRecord::Schema.define(version: 20160406190045) do
     t.integer  "rating"
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.date     "dive_date"
+    t.integer  "vis"
+    t.integer  "temp"
+    t.string   "current"
+    t.string   "waves"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email"
-    t.string   "username"
-    t.string   "password_hash"
     t.string   "first_name"
     t.string   "last_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "username"
+    t.string   "email"
+    t.string   "password_hash"
+    t.integer  "no_of_dives"
+    t.string   "pic_url"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "activation_digest"
+    t.boolean  "activated"
   end
 
   create_table "votes", force: :cascade do |t|
-    t.boolean "up"
-    t.integer "votable_id"
-    t.string  "votable_type"
+    t.boolean  "up"
+    t.integer  "votable_id"
+    t.string   "votable_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end
