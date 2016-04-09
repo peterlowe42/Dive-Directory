@@ -14,17 +14,18 @@
     <div class="panel panel-default col-md-6 small-map">
       <div id="map-small"></div>
     </div>
-    <div class="row">
-      <div class='col-md-12'>
-        <h2>Reviews</h2>
+  </div>
+  
+  <!-- <div class="row"> -->
+    <div class="panel panel-default col-md-12">
+      <div class="panel-heading">
+       <h2>Reviews</h2> 
       </div>
-    </div>
-    <div class="col-md-12">
       <% if @divesite.reviews == [] %>
         <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
       <% else %>
         <% @divesite.reviews.each do |review| %>
-         <div class="row">
+          <div class="row">
            <div class="col-md-2">
              <p> <%= review.user.username %> </p>
              <p>Rating: <%= review.rating %> </p>
@@ -36,21 +37,23 @@
                <%= link_to 'Edit', edit_divesite_review_path(@divesite, review) %>
                <%= link_to 'Delete', divesite_review_path(@divesite, review), method: :delete %>
              <% end %>
-         </div>
+           </div>
+          </div>
         <% end %>
-        <%= link_to 'Add Review', new_divesite_review_path(@divesite) %>
+            <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
       <% end %>
-    </div>
     <script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {
-        disableDefaultUI: true
-      }, internal: {id: 'map-small'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {
+      disableDefaultUI: true
+    }, internal: {id: 'map-small'}}, function(){
+      markers = handler.addMarkers(<%=raw @hash.to_json %>);
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
     </script>
 
-  </div>
+    </div>
+  <!-- </div>   -->
+
 </div>
