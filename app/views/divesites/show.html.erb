@@ -21,21 +21,25 @@
     </div>
     <div class="col-md-12">
       <% if @divesite.reviews == [] %>
-        <h4> This Divesite currently has no reviews</h4>
+        <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
       <% else %>
         <% @divesite.reviews.each do |review| %>
          <div class="row">
            <div class="col-md-2">
              <p> <%= review.user.username %> </p>
+             <p>Rating: <%= review.rating %> </p>
            </div>
            <div class="col-md-10 panel panel-default">
              <h4> <%= review.title %> </h4>
              <p> <%= review.body %> </p>
-           </div>
+             <% if current_user == review.user %>
+               <%= link_to 'Edit', edit_divesite_review_path(@divesite, review) %>
+               <%= link_to 'Delete', divesite_review_path(@divesite, review), method: :delete %>
+             <% end %>
          </div>
         <% end %>
+        <%= link_to 'Add Review', new_divesite_review_path(@divesite) %>
       <% end %>
-      <%= link_to 'Add Review', new_divesite_review_path(@divesite) %>
     </div>
     <script type="text/javascript">
       handler = Gmaps.build('Google');

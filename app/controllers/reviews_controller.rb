@@ -11,9 +11,21 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @divesite = Divesite.find_by(params[:divesite_id])
+    @divesite = Divesite.find(params[:divesite_id])
     @user = current_user
     @divesite.reviews << Review.create(title: params[:review][:title], rating: params[:review][:rating], body: params[:review][:body], user_id: current_user.id)
+    redirect_to divesite_path(@divesite)
+  end
+
+  def edit
+    @divesite = Divesite.find(params[:divesite_id])
+    @review = Review.find(params[:id])
+  end
+
+  def destroy
+    @divesite = Divesite.find(params[:divesite_id])
+    @review = Review.find(params[:id])
+    @review.destroy
     redirect_to divesite_path(@divesite)
   end
 
