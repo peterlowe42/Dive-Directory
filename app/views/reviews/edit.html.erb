@@ -2,23 +2,11 @@
   <% if @errors %>
   <%= @errors %>
   <% end %>
-  <h1>Post Review</h1>
+  <h1>Edit Review</h1>
 
 <div class="row">
   <div class="col-md-3 ">
-    <%= form_for [@divesite, @review] do |f| %>
-  
-      <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-control' %>
-
-      <%= f.label :rating %>
-      <%= f.select(:rating, options_for_select([['1', 1],["2", 2], ["3",3], ["4",4], ["5",5]]), {class: 'form-control'}) %><br>
-
-      <%= f.label :body %>
-      <%= f.text_area :body, class: 'form-control' %><br>
-
-      <%= f.submit "Create Review", class: "btn btn-primary" %>
-    <% end %>
+    <%= render partial:"review_form" %>
   </div>
 </div>
 </div>

@@ -22,6 +22,13 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
   end
 
+  def update
+    @divesite = Divesite.find(params[:divesite_id])
+    @review = Review.find(params[:id])
+    @review.update(title: params[:review][:title], rating: params[:review][:rating], body: params[:review][:body], user_id: current_user.id)
+    redirect_to divesite_path(@divesite)
+  end
+
   def destroy
     @divesite = Divesite.find(params[:divesite_id])
     @review = Review.find(params[:id])
