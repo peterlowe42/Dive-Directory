@@ -2,6 +2,22 @@
   <%= f.label :title %>
   <%= f.text_field :title, class: 'form-control' %>
 
+  <%= f.label :date_of_dive %>
+  <%= f.date_field :dive_date %>
+
+  <%= f.label :visibility %>
+  <%= f.number_field :vis %><br>
+  <%= f.label :units %>
+  <%= f.select(:vis_units, options_for_select([['Metres'],['Feet']])) %><br>
+
+  <%= f.label :temperature %>
+  <%= f.number_field :temp %><br>
+   <%= f.label :units %>
+  <%= f.select(:temp_units, options_for_select([['Celsius'],['Fahrenheit']])) %><br>
+
+  <%= f.label :current %>
+  <%= f.select(:current, options_for_select([['None'],['Mild'],['Moderate'],['Strong'],['Very Strong']])) %>
+
   <%= f.label :rating %>
   <%= f.select(:rating, options_for_select([['1', 1],["2", 2], ["3",3], ["4",4], ["5",5]]), {class: 'form-control'}) %><br>
 

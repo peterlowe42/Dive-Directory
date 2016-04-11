@@ -13,7 +13,9 @@ class ReviewsController < ApplicationController
   def create
     @divesite = Divesite.find(params[:divesite_id])
     @user = current_user
-    @divesite.reviews << Review.create(title: params[:review][:title], rating: params[:review][:rating], body: params[:review][:body], user_id: current_user.id)
+    review = Review.create(review_params)
+    review.update(user_id: current_user.id)
+    @divesite.reviews << review
     redirect_to divesite_path(@divesite)
   end
 
@@ -25,7 +27,7 @@ class ReviewsController < ApplicationController
   def update
     @divesite = Divesite.find(params[:divesite_id])
     @review = Review.find(params[:id])
-    @review.update(title: params[:review][:title], rating: params[:review][:rating], body: params[:review][:body], user_id: current_user.id)
+    @review.update(review_params)
     redirect_to divesite_path(@divesite)
   end
 
@@ -36,6 +38,10 @@ class ReviewsController < ApplicationController
     redirect_to divesite_path(@divesite)
   end
 
+private 
 
+  def review_params
+    params.require(:review).permit(:title, :dive_date, :vis, :vis_units, :temp, :temp_units, :current, :rating, :body)
+  end
 
 end

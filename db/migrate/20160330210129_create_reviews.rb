@@ -7,8 +7,8 @@ class CreateReviews < ActiveRecord::Migration
       t.string :title
       t.text :body
       t.date :dive_date
-      t.integer :vis
-      t.integer :temp 
+      t.float :vis
+      t.float :temp 
       t.string :current
       t.string :waves
 
