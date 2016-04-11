@@ -2,6 +2,7 @@ class ReviewsController < ApplicationController
 
   def new
     if logged_in?
+      @user = current_user
       @divesite = Divesite.find_by(id: params[:divesite_id])
       @review = Review.new
     else

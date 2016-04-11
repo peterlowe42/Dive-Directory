@@ -23,7 +23,10 @@
       <%= f.password_field :password, class: 'form-control' %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %><br>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+      <%= f.label :what_units_do_you_use? %>
+      <%= f.select(:units, options_for_select([['Metric'],['Imperial']])) %>
 
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>

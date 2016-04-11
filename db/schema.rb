@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409201150) do
+ActiveRecord::Schema.define(version: 20160406190045) do
 
   create_table "divesite_locations", force: :cascade do |t|
     t.integer  "divesite_id"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20160409201150) do
     t.string   "title"
     t.text     "body"
     t.date     "dive_date"
-    t.integer  "vis"
-    t.integer  "temp"
+    t.float    "vis"
+    t.float    "temp"
     t.string   "current"
     t.string   "waves"
     t.datetime "created_at",  null: false
@@ -62,12 +62,12 @@ ActiveRecord::Schema.define(version: 20160409201150) do
     t.string   "username"
     t.string   "email"
     t.string   "password_hash"
-    t.integer  "no_of_dives"
     t.string   "pic_url"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
     t.string   "activation_digest"
-    t.boolean  "activated"
+    t.boolean  "activated",         default: false
+    t.string   "units"
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "votes", force: :cascade do |t|

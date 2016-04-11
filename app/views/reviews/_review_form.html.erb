@@ -6,14 +6,21 @@
   <%= f.date_field :dive_date %>
 
   <%= f.label :visibility %>
-  <%= f.number_field :vis %><br>
-  <%= f.label :units %>
-  <%= f.select(:vis_units, options_for_select([['Metres'],['Feet']])) %><br>
+  <%= f.number_field :vis %><span> <% if @user.units == imperial %>
+  Feet
+  <% else %>
+  Metres
+  <% end %>
+  </span>
 
   <%= f.label :temperature %>
-  <%= f.number_field :temp %><br>
-   <%= f.label :units %>
-  <%= f.select(:temp_units, options_for_select([['Celsius'],['Fahrenheit']])) %><br>
+  <%= f.number_field :temp %><span> <% if @user.units == imperial %>
+  Fahrenheit
+  <% else %>
+  Celcius
+  <% end %>
+  </span>
+  
 
   <%= f.label :current %>
   <%= f.select(:current, options_for_select([['None'],['Mild'],['Moderate'],['Strong'],['Very Strong']])) %>
