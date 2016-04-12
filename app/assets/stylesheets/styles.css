@@ -2,6 +2,17 @@ body {
   padding-top: 60px;
 }
 
+#nav-logo {
+  width: 4em;
+  margin-top: -.6em;
+}
+
+#jumbo-logo {
+  width:18em;
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
 #site-div {
  min-height:650px;
   background-color: #0E417F;

@@ -1,0 +1,31 @@
+<div class="row">
+ <div class="col-md-2">
+  <p> <%= review.user.username %> </p>
+  <p>Rating: <%= review.rating %> </p>
+</div>
+<div class="col-md-10 panel panel-default">
+  <h4> <%= review.title %> </h4>
+  <span><strong>Visibility:</strong>
+    <% if current_user && current_user.units == 'Imperial' %>
+      <%= (review.vis * 3.28084).round(0) %> ft
+    <% else %>
+      <%= review.vis %> m
+    <% end %>
+  </span><br> 
+  <span><strong>Temperature:</strong> 
+    <% if current_user && current_user.units == 'Imperial' %>
+      <%= (((review.temp * 9)/5)+32).round(0) %> &deg;F
+    <% else %> 
+      <%= review.temp %> &deg;C
+    <% end %> 
+  </span><br>
+  <span>
+    <strong>Current:</strong><%= review.current %>
+  </span><br>
+  <span> <%= review.body %> </span><br>
+  <% if current_user == review.user %>
+  <%= link_to 'Edit', edit_divesite_review_path(@divesite, review) %>
+  <%= link_to 'Delete', divesite_review_path(@divesite, review), method: :delete %>
+  <% end %>
+</div>
+</div>

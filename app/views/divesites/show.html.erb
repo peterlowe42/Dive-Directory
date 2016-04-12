@@ -5,10 +5,11 @@
     <div class="panel panel-default col-md-4 site-data">
       <div class="panel-heading"> <h2><%= @divesite.site_name %></h2> </div>
       <div class="panel-body">
-        <h4>Latitude: <%= @divesite.lat %> </h4>
-        <h4>Longitude: <%= @divesite.lng %> </h4>
-        <h4>Max Depth: <%= @divesite.max_depth %> </h4>
-        <h4>Min Depth: <%= @divesite.min_depth %> </h4>
+        <span><strong>Latitude:</strong> <%= @divesite.lat %> </span><br>
+        <span><strong>Longitude:</strong> <%= @divesite.lng %> </span><br>
+        <span><strong>Max Depth:</strong> <%= @divesite.max_depth %> </span><br>
+        <span><strong>Min Depth:</strong> <%= @divesite.min_depth %> </span><br>
+        <span><strong>Description:</strong> <%= @divesite.description %> </span><br>
       </div>
     </div>
     <div class="panel panel-default col-md-6 small-map">
@@ -25,20 +26,7 @@
         <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
       <% else %>
         <% @divesite.reviews.each do |review| %>
-          <div class="row">
-           <div class="col-md-2">
-             <p> <%= review.user.username %> </p>
-             <p>Rating: <%= review.rating %> </p>
-           </div>
-           <div class="col-md-10 panel panel-default">
-             <h4> <%= review.title %> </h4>
-             <p> <%= review.body %> </p>
-             <% if current_user == review.user %>
-               <%= link_to 'Edit', edit_divesite_review_path(@divesite, review) %>
-               <%= link_to 'Delete', divesite_review_path(@divesite, review), method: :delete %>
-             <% end %>
-           </div>
-          </div>
+          <%= render :partial => 'reviews/show', locals:{ review: review }  %>
         <% end %>
             <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
       <% end %>
