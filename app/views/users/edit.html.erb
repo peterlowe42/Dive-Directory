@@ -1,1 +1,12 @@
-edit user
+<div class="container">
+  <% if @errors %>
+  <%= @errors %>
+  <% end %>
+  <h1>Edit Account</h1>
+
+  <div class="row">
+    <div class="col-md-3 ">
+      <%= render :partial => 'users/user_form' %>
+    </div>
+  </div>
+</div>

@@ -16,6 +16,7 @@ class DivesitesController < ApplicationController
         @hash = Gmaps4rails.build_markers(@location.divesites) do |site, marker|
           marker.lat site.lat
           marker.lng site.lng
+          marker.infowindow site.site_name
         end
       else
         flash[:danger] = "Sorry we could not find that location"
@@ -25,7 +26,10 @@ class DivesitesController < ApplicationController
 
   def show
     @divesite = Divesite.find_by(id: params[:id])
-    @lat = @divesite.lat
+    @hash = Gmaps4rails.build_markers(@divesite) do |site, marker|
+      marker.lat site.lat
+      marker.lng site.lng
+    end
   end
 
 end

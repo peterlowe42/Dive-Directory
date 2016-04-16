@@ -17,11 +17,14 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id] == params[:id].to_i
-     @user = User.find_by(session[:user_id])
-    else
-     redirect_to login_path
+    @user = current_user
+    if @user.nil?
+      redirect_to login_path
     end
+  end
+
+  def edit
+    @user = current_user
   end
 
   private
