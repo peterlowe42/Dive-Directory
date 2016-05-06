@@ -1,5 +1,4 @@
-class WelcomeController < ActiveRecord::Base
- 
+class WelcomeController < ApplicationController
   def index
   end
 

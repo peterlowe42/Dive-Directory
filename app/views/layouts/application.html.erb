@@ -50,7 +50,7 @@
             <div class="form-group">
               <input name="location" type="text" class="form-control" placeholder="Search by Location">
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button id="location-search" type="submit" class="btn btn-default">Submit</button>
           </form>
         </div><!-- /.navbar-collapse -->
       </nav>
@@ -59,7 +59,16 @@
     <div id="flash-messages">
       <%= flash_messages %>
     </div>
-    <%= yield %>
+    <div id='loading-message' class='container-fluid'>
+      <div class="jumbotron text-center">
+      <%= image_tag ('logoinverse'), id: 'jumbo-logo' %><br>
+        <%= image_tag ('loading'), id: 'loading-gif'%>
+        <p>Finding divesites please wait</p>
+    </div>
+    </div>
+    <div id="content">
+      <%= yield %>
+    </div>
     <footer>
       <!-- <div class="container"> -->
 

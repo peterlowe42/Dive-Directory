@@ -11,6 +11,7 @@ class DivesitesController < ApplicationController
         flash[:error] = "Sorry we could not find that location"
       end
     end
+    render partial:"site_list", layout: false 
   end
 
   def show

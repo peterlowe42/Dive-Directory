@@ -12,6 +12,12 @@ footer {
   background-color: #101010;
 }
 
+#content { 
+  position:absolute;
+  width:100%;
+  top:5em;
+}
+
 #nav-logo {
   width: 4em;
   margin-top: -.6em;
@@ -21,6 +27,11 @@ footer {
   width:18em;
   -webkit-filter: invert(100%);
     filter: invert(100%);
+}
+
+#loading-gif {
+  margin-top: 1em;
+  width:5em;
 }
 
 #site-div {
@@ -44,9 +55,20 @@ footer {
   margin-left:1em;
 }
 
+#loading-message {
+  position:fixed;
+  width:100%;
+  top:5em;
+  z-index:10;
+  display: none;
+}
 .site-data {
   margin-right: 2em;
   height: 300px;
+}
+
+.jumbotron {
+  box-shadow: 0px 0px 5px 7px #28292E
 }
 
 .site-list {
