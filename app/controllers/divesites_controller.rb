@@ -5,18 +5,8 @@ class DivesitesController < ApplicationController
     if params[:location]
       result = Geocoder.search(params[:location])
       if result[0]
-        location = result[0].address
-        coords = result[0].coordinates
-        resp = HTTParty.get(generate_url(coords[0],coords[1])).to_json
-        data_hash = JSON.parse(resp)
-        site_data = data_hash['sites']
-        @location = check_and_update_db(site_data, location, @lat, @lng)
-        @divesites = @location.divesites
-        @hash = Gmaps4rails.build_markers(@divesites) do |site, marker|
-          marker.lat site.lat
-          marker.lng site.lng
-          marker.infowindow site.site_name
-        end
+        get_divesites
+        build_marker_hash
       else
         flash[:error] = "Sorry we could not find that location"
       end
@@ -28,6 +18,26 @@ class DivesitesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@divesite) do |site, marker|
       marker.lat site.lat
       marker.lng site.lng
+      marker.infowindow site.site_name
+    end
+  end
+
+  private
+
+  def get_divesites
+    location = result[0].address
+    coords = result[0].coordinates
+    resp = HTTParty.get(generate_url(coords[0],coords[1])).to_json
+    data_hash = JSON.parse(resp)
+    @location = check_and_update_db(data_hash['sites'], location, @lat, @lng)
+    @divesites = @location.divesites
+  end 
+
+  def build_marker_hash
+    @hash = Gmaps4rails.build_markers(@divesites) do |site, marker|
+      marker.lat site.lat
+      marker.lng site.lng
+      marker.infowindow site.site_name
     end
   end
 
