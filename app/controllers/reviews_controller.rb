@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
       @divesite = Divesite.find_by(id: params[:divesite_id])
       @review = Review.new
     else
-      flash[:danger] = "You must be logged in to post a review"
+      flash[:error] = "You must be logged in to post a review"
       redirect_to login_path
     end
   end
