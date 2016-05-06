@@ -56,17 +56,17 @@
       </nav>
 
     </header>
-    <div id="flash_messages">
-      <% flash.each do |key, value| %>
-      <%= content_tag(:div, value, :class => "flash #{key}") %>
-      <% end %>
+    <div id="flash-messages">
+      <%= flash_messages %>
     </div>
     <%= yield %>
     <footer>
-      <div class="container">
+      <!-- <div class="container"> -->
+
         <br>
         <p class="text-muted">Divesite locations coutesy of divesites.com</p>
-      </div>
+      <!-- </div> -->
+
     </footer>
   </body>
   </html>
