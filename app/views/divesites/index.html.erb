@@ -25,7 +25,7 @@
     <script type="text/javascript">
       handler = Gmaps.build('Google');
       handler.buildMap({ provider: {
-        disableDefaultUI: true
+        scrollwheel: false
       }, internal: {id: 'map'}}, function(){
         markers = handler.addMarkers(<%=raw @hash.to_json %>);
         handler.bounds.extendWith(markers);
@@ -34,8 +34,9 @@
     </script>
 
   <% else %>
-    <div class="jumbotron">
-      <h1>Welcome to Dive Directory</h1>
+    <div class="jumbotron text-center">
+      <%= image_tag ('logoinverse'), id: 'jumbo-logo' %>
+      <h1> Welcome to Dive Directory</h1>
       <p>Enter a location in the search box to begin</p>
     </div>
   <% end %>

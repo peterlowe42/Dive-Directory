@@ -1,0 +1,39 @@
+<%= form_for [@divesite, @review] do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title, class: 'form-control' %><br>
+
+  <%= f.label :date_of_dive %><br>
+  <%= f.date_field :dive_date, class: 'form-control' %><br>
+
+  <%= f.label :visibility %><br>
+  <div class="input-group">
+    <%= f.number_field :vis, class: 'form-control' %><span class="input-group-addon"> <% if @user.units == 'Imperial' %>
+    feet
+    <% else %>
+    metres
+    <% end %>
+    </span>
+  </div><br>
+  
+  <%= f.label :temperature %>
+  <div class="input-group">
+    <%= f.number_field :temp, class: 'form-control' %><span class="input-group-addon" > <% if @user.units == 'Imperial' %>
+    &deg;F
+    <% else %>
+    &deg;C
+    <% end %>
+    </span>
+  </div><br>
+  
+  <div class="form-group">
+    <%= f.label :current %>
+    <%= f.select(:current, options_for_select([['None'],['Mild'],['Moderate'],['Strong'],['Very Strong']]), {}, {class: "form-control"}) %>
+  </div>
+  <%= f.label :rating %>
+  <%= f.select(:rating, options_for_select([['1', 1],["2", 2], ["3",3], ["4",4], ["5",5]]), {}, {class: 'form-control'}) %><br>
+
+  <%= f.label :review_text %>
+  <%= f.text_area :body, class: 'form-control' %><br>
+
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>

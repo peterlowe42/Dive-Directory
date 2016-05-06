@@ -6,8 +6,14 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :rating
       t.string :title
       t.text :body
+      t.date :dive_date
+      t.float :vis
+      t.float :temp 
+      t.string :current
+      t.string :waves
 
-      t.timestamps 
+
+      t.timestamps null: false
     end
   end
 end

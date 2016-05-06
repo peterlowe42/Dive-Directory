@@ -5,7 +5,7 @@ class CreateDivesiteLocations < ActiveRecord::Migration
       t.references :location
       t.string :distance
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
