@@ -17821,3 +17821,935 @@ ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.m
 
 
 Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-04-07 12:14:55 -0700
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 18:44:03 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.5) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.5) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.4ms)
+  [1m[36m (98.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (58.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateReviews (20160330210129)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/pete/Dev/Dive-Directory/db/migrate/20160330210129_create_reviews.rb:11)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "reviews" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "divesite_id" integer, "rating" integer, "title" varchar, "body" text, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330210129"]]
+  [1m[35m (57.6ms)[0m  commit transaction
+Migrating to CreateUsers (20160330210152)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/pete/Dev/Dive-Directory/db/migrate/20160330210152_create_users.rb:10)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "username" varchar, "password_hash" varchar, "first_name" varchar, "last_name" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330210152"]]
+  [1m[35m (56.5ms)[0m  commit transaction
+Migrating to CreateLocations (20160330210309)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/pete/Dev/Dive-Directory/db/migrate/20160330210309_create_locations.rb:8)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lat" varchar, "lng" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330210309"]]
+  [1m[35m (56.7ms)[0m  commit transaction
+Migrating to CreateDivesiteLocations (20160330210326)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/pete/Dev/Dive-Directory/db/migrate/20160330210326_create_divesite_locations.rb:8)
+  [1m[35m (0.2ms)[0m  CREATE TABLE "divesite_locations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "divesite_id" integer, "location_id" integer, "distance" varchar, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160330210326"]]
+  [1m[35m (65.0ms)[0m  commit transaction
+Migrating to CreateVotes (20160405225542)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "votes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "up" boolean, "votable_id" integer, "votable_type" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160405225542"]]
+  [1m[35m (73.5ms)[0m  commit transaction
+Migrating to CreateDivesites (20160406190045)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "divesites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "site_name" varchar, "lat" varchar, "lng" varchar, "source_id" varchar, "max_depth" integer, "min_depth" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160406190045"]]
+  [1m[35m (56.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-05-05 18:45:10 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DivesitesController#index as HTML
+  Rendered divesites/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 677ms (Views: 669.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/styles.self-e671b832b3151e937c74cd0b94e6d39b855947dc7f0f2dd1baac31e9c376434c.css?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/dive_sites.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/underscore.self-8c17561264389571750ac522c272868d7105cf5e3f8af4761d09489b631d177c.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/base/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/objects/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/objects/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/objects/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/objects/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/builders/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/objects/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/gmaps/google/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for 127.0.0.1 at 2016-05-05 18:45:11 -0700
+
+
+Started GET "/divesites?location=San+Diego" for 127.0.0.1 at 2016-05-05 18:45:25 -0700
+Processing by DivesitesController#index as HTML
+  Parameters: {"location"=>"San Diego"}
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."name" = ?  [["name", "San Diego, CA, USA"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "locations" ("name", "lat", "lng", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "San Diego, CA, USA"], ["lat", "32.715738"], ["lng", "-117.1610838"], ["created_at", "2016-05-06 01:45:26.003220"], ["updated_at", "2016-05-06 01:45:26.003220"]]
+  [1m[36m (56.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16877"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Belgian King Wreck"], ["lng", "-117.2320"], ["lat", "32.6864"], ["source_id", "16877"], ["created_at", "2016-05-06 01:45:26.070970"], ["updated_at", "2016-05-06 01:45:26.070970"]]
+  [1m[36m (38.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 1], ["created_at", "2016-05-06 01:45:26.131321"], ["updated_at", "2016-05-06 01:45:26.131321"]]
+  [1m[35m (36.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.2ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 1], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "4.59"], ["updated_at", "2016-05-06 01:45:26.172227"], ["id", 1]]
+  [1m[35m (37.2ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "16640"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Zuniga Point"], ["lng", "-117.2233"], ["lat", "32.6747"], ["source_id", "16640"], ["created_at", "2016-05-06 01:45:26.212204"], ["updated_at", "2016-05-06 01:45:26.212204"]]
+  [1m[35m (56.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 2], ["created_at", "2016-05-06 01:45:26.271349"], ["updated_at", "2016-05-06 01:45:26.271349"]]
+  [1m[36m (55.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 2], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "4.60"], ["updated_at", "2016-05-06 01:45:26.328476"], ["id", 2]]
+  [1m[36m (39.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17003"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "California Barkentine Wreck"], ["lng", "-117.2326"], ["lat", "32.6666"], ["source_id", "17003"], ["created_at", "2016-05-06 01:45:26.370725"], ["updated_at", "2016-05-06 01:45:26.370725"]]
+  [1m[36m (72.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 3], ["created_at", "2016-05-06 01:45:26.445561"], ["updated_at", "2016-05-06 01:45:26.445561"]]
+  [1m[35m (39.2ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 3], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "5.37"], ["updated_at", "2016-05-06 01:45:26.487004"], ["id", 3]]
+  [1m[35m (39.4ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18255"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Ladera Street Beach"], ["lng", "-117.2573"], ["lat", "32.7201"], ["source_id", "18255"], ["created_at", "2016-05-06 01:45:26.528737"], ["updated_at", "2016-05-06 01:45:26.528737"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 4], ["created_at", "2016-05-06 01:45:26.578732"], ["updated_at", "2016-05-06 01:45:26.578732"]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 4], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "5.60"], ["updated_at", "2016-05-06 01:45:26.620152"], ["id", 4]]
+  [1m[36m (39.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18164"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Pescadero Point"], ["lng", "-117.2552"], ["lat", "32.7389"], ["source_id", "18164"], ["created_at", "2016-05-06 01:45:26.662219"], ["updated_at", "2016-05-06 01:45:26.662219"]]
+  [1m[36m (39.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 5], ["created_at", "2016-05-06 01:45:26.703870"], ["updated_at", "2016-05-06 01:45:26.703870"]]
+  [1m[35m (39.4ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 5], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "5.70"], ["updated_at", "2016-05-06 01:45:26.745314"], ["id", 5]]
+  [1m[35m (39.6ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "16602"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Shoshini Oil Screw Wreck"], ["lng", "-117.2410"], ["lat", "32.7660"], ["source_id", "16602"], ["created_at", "2016-05-06 01:45:26.787255"], ["updated_at", "2016-05-06 01:45:26.787255"]]
+  [1m[35m (39.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 6], ["created_at", "2016-05-06 01:45:26.828833"], ["updated_at", "2016-05-06 01:45:26.828833"]]
+  [1m[36m (39.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 6], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "5.80"], ["updated_at", "2016-05-06 01:45:26.870257"], ["id", 6]]
+  [1m[36m (39.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "24450"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Mission Bay Inlet"], ["lng", "-117.2487"], ["lat", "32.7597"], ["source_id", "24450"], ["created_at", "2016-05-06 01:45:26.912685"], ["updated_at", "2016-05-06 01:45:26.912685"]]
+  [1m[36m (38.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 7], ["created_at", "2016-05-06 01:45:26.953919"], ["updated_at", "2016-05-06 01:45:26.953919"]]
+  [1m[35m (39.3ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 7], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "5.93"], ["updated_at", "2016-05-06 01:45:26.995289"], ["id", 7]]
+  [1m[35m (39.5ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "17957"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Dyablo Wreck"], ["lng", "-117.2404"], ["lat", "32.6613"], ["source_id", "17957"], ["created_at", "2016-05-06 01:45:27.037208"], ["updated_at", "2016-05-06 01:45:27.037208"]]
+  [1m[35m (39.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 8], ["created_at", "2016-05-06 01:45:27.078977"], ["updated_at", "2016-05-06 01:45:27.078977"]]
+  [1m[36m (39.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 8], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "5.95"], ["updated_at", "2016-05-06 01:45:27.120195"], ["id", 8]]
+  [1m[36m (56.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16380"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Point Loma Kelp Beds"], ["lng", "-117.2571"], ["lat", "32.6837"], ["source_id", "16380"], ["created_at", "2016-05-06 01:45:27.178839"], ["updated_at", "2016-05-06 01:45:27.178839"]]
+  [1m[36m (39.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 9], ["created_at", "2016-05-06 01:45:27.220577"], ["updated_at", "2016-05-06 01:45:27.220577"]]
+  [1m[35m (56.0ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 9], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "6.00"], ["updated_at", "2016-05-06 01:45:27.278626"], ["id", 9]]
+  [1m[35m (39.6ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18295"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Loveley Flora and Plutus Wrecks"], ["lng", "-117.2493"], ["lat", "32.6659"], ["source_id", "18295"], ["created_at", "2016-05-06 01:45:27.321170"], ["updated_at", "2016-05-06 01:45:27.321170"]]
+  [1m[35m (59.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 10], ["created_at", "2016-05-06 01:45:27.383049"], ["updated_at", "2016-05-06 01:45:27.383049"]]
+  [1m[36m (51.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 10], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "6.18"], ["updated_at", "2016-05-06 01:45:27.436932"], ["id", 10]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18002"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Dot Wreck"], ["lng", "-117.2580"], ["lat", "32.7570"], ["source_id", "18002"], ["created_at", "2016-05-06 01:45:27.487780"], ["updated_at", "2016-05-06 01:45:27.487780"]]
+  [1m[36m (47.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 11], ["created_at", "2016-05-06 01:45:27.537841"], ["updated_at", "2016-05-06 01:45:27.537841"]]
+  [1m[35m (88.3ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 11], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "6.31"], ["updated_at", "2016-05-06 01:45:27.628857"], ["id", 11]]
+  [1m[35m (39.1ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "16919"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Bonita Cove"], ["lng", "-117.2488"], ["lat", "32.7726"], ["source_id", "16919"], ["created_at", "2016-05-06 01:45:27.670580"], ["updated_at", "2016-05-06 01:45:27.670580"]]
+  [1m[35m (64.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 12], ["created_at", "2016-05-06 01:45:27.737317"], ["updated_at", "2016-05-06 01:45:27.737317"]]
+  [1m[36m (39.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 12], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "6.44"], ["updated_at", "2016-05-06 01:45:27.778591"], ["id", 12]]
+  [1m[36m (39.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17373"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Capistrano Wreck"], ["lng", "-117.2490"], ["lat", "32.7750"], ["source_id", "17373"], ["created_at", "2016-05-06 01:45:27.820634"], ["updated_at", "2016-05-06 01:45:27.820634"]]
+  [1m[36m (47.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 13], ["created_at", "2016-05-06 01:45:27.870605"], ["updated_at", "2016-05-06 01:45:27.870605"]]
+  [1m[35m (39.3ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 13], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "6.55"], ["updated_at", "2016-05-06 01:45:27.912158"], ["id", 13]]
+  [1m[35m (39.4ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18197"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Olympic Barkentine Wreck"], ["lng", "-117.2730"], ["lat", "32.6809"], ["source_id", "18197"], ["created_at", "2016-05-06 01:45:27.954131"], ["updated_at", "2016-05-06 01:45:27.954131"]]
+  [1m[35m (47.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 14], ["created_at", "2016-05-06 01:45:28.004180"], ["updated_at", "2016-05-06 01:45:28.004180"]]
+  [1m[36m (38.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 14], ["location_id", 1]]
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "6.94"], ["updated_at", "2016-05-06 01:45:28.046466"], ["id", 14]]
+  [1m[36m (38.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18241"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Mission Beach"], ["lng", "-117.2546"], ["lat", "32.7814"], ["source_id", "18241"], ["created_at", "2016-05-06 01:45:28.087696"], ["updated_at", "2016-05-06 01:45:28.087696"]]
+  [1m[36m (46.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 15], ["created_at", "2016-05-06 01:45:28.137613"], ["updated_at", "2016-05-06 01:45:28.137613"]]
+  [1m[35m (38.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 15], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "7.08"], ["updated_at", "2016-05-06 01:45:28.178861"], ["id", 15]]
+  [1m[35m (84.4ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18131"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "PC 815 Subchaser"], ["lng", "-117.2360"], ["lat", "32.6310"], ["source_id", "18131"], ["created_at", "2016-05-06 01:45:28.266105"], ["updated_at", "2016-05-06 01:45:28.266105"]]
+  [1m[35m (51.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 16], ["created_at", "2016-05-06 01:45:28.320719"], ["updated_at", "2016-05-06 01:45:28.320719"]]
+  [1m[36m (72.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 16], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "7.30"], ["updated_at", "2016-05-06 01:45:28.395239"], ["id", 16]]
+  [1m[36m (48.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21689"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "NOSC Tower"], ["lng", "-117.2675"], ["lat", "32.7725"], ["source_id", "21689"], ["created_at", "2016-05-06 01:45:28.445858"], ["updated_at", "2016-05-06 01:45:28.445858"]]
+  [1m[36m (47.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 17], ["created_at", "2016-05-06 01:45:28.495621"], ["updated_at", "2016-05-06 01:45:28.495621"]]
+  [1m[35m (47.5ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 17], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "7.32"], ["updated_at", "2016-05-06 01:45:28.545337"], ["id", 17]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "22636"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Point Loma"], ["lng", "-117.2845"], ["lat", "32.6931"], ["source_id", "22636"], ["created_at", "2016-05-06 01:45:28.595670"], ["updated_at", "2016-05-06 01:45:28.595670"]]
+  [1m[35m (47.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 18], ["created_at", "2016-05-06 01:45:28.645846"], ["updated_at", "2016-05-06 01:45:28.645846"]]
+  [1m[36m (47.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 18], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "7.35"], ["updated_at", "2016-05-06 01:45:28.695286"], ["id", 18]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17193"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Strider Yacht Wreck"], ["lng", "-117.2710"], ["lat", "32.7700"], ["source_id", "17193"], ["created_at", "2016-05-06 01:45:28.745644"], ["updated_at", "2016-05-06 01:45:28.745644"]]
+  [1m[36m (63.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 19], ["created_at", "2016-05-06 01:45:28.811773"], ["updated_at", "2016-05-06 01:45:28.811773"]]
+  [1m[35m (64.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 19], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "7.41"], ["updated_at", "2016-05-06 01:45:28.878661"], ["id", 19]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "17879"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "El Rey Wreck"], ["lng", "-117.2767"], ["lat", "32.7642"], ["source_id", "17879"], ["created_at", "2016-05-06 01:45:28.928881"], ["updated_at", "2016-05-06 01:45:28.928881"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 20], ["created_at", "2016-05-06 01:45:28.979199"], ["updated_at", "2016-05-06 01:45:28.979199"]]
+  [1m[36m (47.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 20], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "7.50"], ["updated_at", "2016-05-06 01:45:29.028715"], ["id", 20]]
+  [1m[36m (64.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21693"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "El Rey"], ["lng", "-117.2767"], ["lat", "32.7642"], ["source_id", "21693"], ["created_at", "2016-05-06 01:45:29.095699"], ["updated_at", "2016-05-06 01:45:29.095699"]]
+  [1m[36m (47.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 21], ["created_at", "2016-05-06 01:45:29.145755"], ["updated_at", "2016-05-06 01:45:29.145755"]]
+  [1m[35m (47.5ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 21], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "7.51"], ["updated_at", "2016-05-06 01:45:29.195321"], ["id", 21]]
+  [1m[35m (47.5ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21694"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Ruby E"], ["lng", "-117.2767"], ["lat", "32.7672"], ["source_id", "21694"], ["created_at", "2016-05-06 01:45:29.245622"], ["updated_at", "2016-05-06 01:45:29.245622"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 22], ["created_at", "2016-05-06 01:45:29.295818"], ["updated_at", "2016-05-06 01:45:29.295818"]]
+  [1m[36m (47.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 22], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "7.60"], ["updated_at", "2016-05-06 01:45:29.345331"], ["id", 22]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18179"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "High Seas Wreck"], ["lng", "-117.2519"], ["lat", "32.6278"], ["source_id", "18179"], ["created_at", "2016-05-06 01:45:29.395759"], ["updated_at", "2016-05-06 01:45:29.395759"]]
+  [1m[36m (102.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 23], ["created_at", "2016-05-06 01:45:29.500974"], ["updated_at", "2016-05-06 01:45:29.500974"]]
+  [1m[35m (50.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 23], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "8.05"], ["updated_at", "2016-05-06 01:45:29.553609"], ["id", 23]]
+  [1m[35m (64.7ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21700"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Yukon"], ["lng", "-117.2853"], ["lat", "32.7800"], ["source_id", "21700"], ["created_at", "2016-05-06 01:45:29.620802"], ["updated_at", "2016-05-06 01:45:29.620802"]]
+  [1m[35m (47.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 24], ["created_at", "2016-05-06 01:45:29.670576"], ["updated_at", "2016-05-06 01:45:29.670576"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 24], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "8.48"], ["updated_at", "2016-05-06 01:45:29.720485"], ["id", 24]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16973"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Tourmaline Beach"], ["lng", "-117.2632"], ["lat", "32.8046"], ["source_id", "16973"], ["created_at", "2016-05-06 01:45:29.770965"], ["updated_at", "2016-05-06 01:45:29.770965"]]
+  [1m[36m (47.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 25], ["created_at", "2016-05-06 01:45:29.820795"], ["updated_at", "2016-05-06 01:45:29.820795"]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 25], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "8.54"], ["updated_at", "2016-05-06 01:45:29.870303"], ["id", 25]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18265"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Hogan Wreck"], ["lng", "-117.1737"], ["lat", "32.5914"], ["source_id", "18265"], ["created_at", "2016-05-06 01:45:29.920577"], ["updated_at", "2016-05-06 01:45:29.920577"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 26], ["created_at", "2016-05-06 01:45:29.970652"], ["updated_at", "2016-05-06 01:45:29.970652"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 26], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "8.62"], ["updated_at", "2016-05-06 01:45:30.020459"], ["id", 26]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16646"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Yukon Wreck"], ["lng", "-117.2836"], ["lat", "32.7892"], ["source_id", "16646"], ["created_at", "2016-05-06 01:45:30.070582"], ["updated_at", "2016-05-06 01:45:30.070582"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 27], ["created_at", "2016-05-06 01:45:30.120641"], ["updated_at", "2016-05-06 01:45:30.120641"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 27], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "8.74"], ["updated_at", "2016-05-06 01:45:30.170370"], ["id", 27]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "16372"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Shooters Fantasy Wreck"], ["lng", "-117.2715"], ["lat", "32.8020"], ["source_id", "16372"], ["created_at", "2016-05-06 01:45:30.220606"], ["updated_at", "2016-05-06 01:45:30.220606"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 28], ["created_at", "2016-05-06 01:45:30.270721"], ["updated_at", "2016-05-06 01:45:30.270721"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 28], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "8.76"], ["updated_at", "2016-05-06 01:45:30.320470"], ["id", 28]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21697"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Windansea"], ["lng", "-117.2800"], ["lat", "32.8261"], ["source_id", "21697"], ["created_at", "2016-05-06 01:45:30.370679"], ["updated_at", "2016-05-06 01:45:30.370679"]]
+  [1m[36m (60.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 29], ["created_at", "2016-05-06 01:45:30.433561"], ["updated_at", "2016-05-06 01:45:30.433561"]]
+  [1m[35m (51.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 29], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "10.29"], ["updated_at", "2016-05-06 01:45:30.487127"], ["id", 29]]
+  [1m[35m (61.9ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "16673"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Wilmar Oil Screw"], ["lng", "-117.2830"], ["lat", "32.8330"], ["source_id", "16673"], ["created_at", "2016-05-06 01:45:30.551404"], ["updated_at", "2016-05-06 01:45:30.551404"]]
+  [1m[35m (50.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 30], ["created_at", "2016-05-06 01:45:30.604111"], ["updated_at", "2016-05-06 01:45:30.604111"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 30], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "10.76"], ["updated_at", "2016-05-06 01:45:30.653780"], ["id", 30]]
+  [1m[36m (56.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18275"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Marine Street"], ["lng", "-117.2837"], ["lat", "32.8365"], ["source_id", "18275"], ["created_at", "2016-05-06 01:45:30.712267"], ["updated_at", "2016-05-06 01:45:30.712267"]]
+  [1m[36m (56.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 31], ["created_at", "2016-05-06 01:45:30.770753"], ["updated_at", "2016-05-06 01:45:30.770753"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 31], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "10.97"], ["updated_at", "2016-05-06 01:45:30.820451"], ["id", 31]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18251"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Missille Tower"], ["lng", "-117.3395"], ["lat", "32.6602"], ["source_id", "18251"], ["created_at", "2016-05-06 01:45:30.870591"], ["updated_at", "2016-05-06 01:45:30.870591"]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 32], ["created_at", "2016-05-06 01:45:30.920700"], ["updated_at", "2016-05-06 01:45:30.920700"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 32], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.06"], ["updated_at", "2016-05-06 01:45:30.970480"], ["id", 32]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "22060"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Marine Room"], ["lng", "-117.2612"], ["lat", "32.8523"], ["source_id", "22060"], ["created_at", "2016-05-06 01:45:31.020660"], ["updated_at", "2016-05-06 01:45:31.020660"]]
+  [1m[36m (64.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 33], ["created_at", "2016-05-06 01:45:31.087548"], ["updated_at", "2016-05-06 01:45:31.087548"]]
+  [1m[35m (64.6ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 33], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.08"], ["updated_at", "2016-05-06 01:45:31.154011"], ["id", 33]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "24449"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "La Jolla Shores Underwater Park"], ["lng", "-117.2606"], ["lat", "32.8534"], ["source_id", "24449"], ["created_at", "2016-05-06 01:45:31.204058"], ["updated_at", "2016-05-06 01:45:31.204058"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 34], ["created_at", "2016-05-06 01:45:31.254019"], ["updated_at", "2016-05-06 01:45:31.254019"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 34], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.13"], ["updated_at", "2016-05-06 01:45:31.303777"], ["id", 34]]
+  [1m[36m (64.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18235"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "La Jolla Shores"], ["lng", "-117.2607"], ["lat", "32.8544"], ["source_id", "18235"], ["created_at", "2016-05-06 01:45:31.370761"], ["updated_at", "2016-05-06 01:45:31.370761"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 35], ["created_at", "2016-05-06 01:45:31.420742"], ["updated_at", "2016-05-06 01:45:31.420742"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 35], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.19"], ["updated_at", "2016-05-06 01:45:31.470410"], ["id", 35]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21698"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Hospital Point"], ["lng", "-117.2814"], ["lat", "32.8424"], ["source_id", "21698"], ["created_at", "2016-05-06 01:45:31.520670"], ["updated_at", "2016-05-06 01:45:31.520670"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 36], ["created_at", "2016-05-06 01:45:31.570764"], ["updated_at", "2016-05-06 01:45:31.570764"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 36], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.20"], ["updated_at", "2016-05-06 01:45:31.620450"], ["id", 36]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17025"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "The Cave"], ["lng", "-117.2700"], ["lat", "32.8498"], ["source_id", "17025"], ["created_at", "2016-05-06 01:45:31.671338"], ["updated_at", "2016-05-06 01:45:31.671338"]]
+  [1m[36m (46.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 37], ["created_at", "2016-05-06 01:45:31.720892"], ["updated_at", "2016-05-06 01:45:31.720892"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 37], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.22"], ["updated_at", "2016-05-06 01:45:31.770521"], ["id", 37]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21690"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "The Cave"], ["lng", "-117.2700"], ["lat", "32.8498"], ["source_id", "21690"], ["created_at", "2016-05-06 01:45:31.820734"], ["updated_at", "2016-05-06 01:45:31.820734"]]
+  [1m[35m (39.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 38], ["created_at", "2016-05-06 01:45:31.862396"], ["updated_at", "2016-05-06 01:45:31.862396"]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 38], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.22"], ["updated_at", "2016-05-06 01:45:31.903789"], ["id", 38]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16707"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Wipeout Beach"], ["lng", "-117.2792"], ["lat", "32.8450"], ["source_id", "16707"], ["created_at", "2016-05-06 01:45:31.953950"], ["updated_at", "2016-05-06 01:45:31.953950"]]
+  [1m[36m (64.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 39], ["created_at", "2016-05-06 01:45:32.020985"], ["updated_at", "2016-05-06 01:45:32.020985"]]
+  [1m[35m (64.3ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 39], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.26"], ["updated_at", "2016-05-06 01:45:32.087209"], ["id", 39]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "17841"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "La Jolla Canyon"], ["lng", "-117.2595"], ["lat", "32.8563"], ["source_id", "17841"], ["created_at", "2016-05-06 01:45:32.137455"], ["updated_at", "2016-05-06 01:45:32.137455"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 40], ["created_at", "2016-05-06 01:45:32.187677"], ["updated_at", "2016-05-06 01:45:32.187677"]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 40], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.27"], ["updated_at", "2016-05-06 01:45:32.237220"], ["id", 40]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21695"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Wipe Out Beach - Boomer"], ["lng", "-117.2787"], ["lat", "32.8462"], ["source_id", "21695"], ["created_at", "2016-05-06 01:45:32.287766"], ["updated_at", "2016-05-06 01:45:32.287766"]]
+  [1m[36m (47.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 41], ["created_at", "2016-05-06 01:45:32.337631"], ["updated_at", "2016-05-06 01:45:32.337631"]]
+  [1m[35m (64.3ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 41], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.31"], ["updated_at", "2016-05-06 01:45:32.403813"], ["id", 41]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18173"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Goldfish Point"], ["lng", "-117.2713"], ["lat", "32.8507"], ["source_id", "18173"], ["created_at", "2016-05-06 01:45:32.500748"], ["updated_at", "2016-05-06 01:45:32.500748"]]
+  [1m[35m (59.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 42], ["created_at", "2016-05-06 01:45:32.562606"], ["updated_at", "2016-05-06 01:45:32.562606"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 42], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.31"], ["updated_at", "2016-05-06 01:45:32.612297"], ["id", 42]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17383"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Cabezon Cruiser"], ["lng", "-117.2620"], ["lat", "32.8560"], ["source_id", "17383"], ["created_at", "2016-05-06 01:45:32.662459"], ["updated_at", "2016-05-06 01:45:32.662459"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 43], ["created_at", "2016-05-06 01:45:32.712823"], ["updated_at", "2016-05-06 01:45:32.712823"]]
+  [1m[35m (62.5ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 43], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.33"], ["updated_at", "2016-05-06 01:45:32.777257"], ["id", 43]]
+  [1m[35m (58.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21691"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "La Jolla Cove"], ["lng", "-117.2727"], ["lat", "32.8503"], ["source_id", "21691"], ["created_at", "2016-05-06 01:45:32.837490"], ["updated_at", "2016-05-06 01:45:32.837490"]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 44], ["created_at", "2016-05-06 01:45:32.887643"], ["updated_at", "2016-05-06 01:45:32.887643"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 44], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.34"], ["updated_at", "2016-05-06 01:45:32.937360"], ["id", 44]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21692"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Shell Beach"], ["lng", "-117.2754"], ["lat", "32.8488"], ["source_id", "21692"], ["created_at", "2016-05-06 01:45:32.979204"], ["updated_at", "2016-05-06 01:45:32.979204"]]
+  [1m[36m (39.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 45], ["created_at", "2016-05-06 01:45:33.020976"], ["updated_at", "2016-05-06 01:45:33.020976"]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 45], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.34"], ["updated_at", "2016-05-06 01:45:33.070632"], ["id", 45]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21696"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "South Casa"], ["lng", "-117.2788"], ["lat", "32.8468"], ["source_id", "21696"], ["created_at", "2016-05-06 01:45:33.120881"], ["updated_at", "2016-05-06 01:45:33.120881"]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 46], ["created_at", "2016-05-06 01:45:33.171018"], ["updated_at", "2016-05-06 01:45:33.171018"]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 46], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.35"], ["updated_at", "2016-05-06 01:45:33.220785"], ["id", 46]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "22707"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Vallecitos Point, La Jolla Shores Beach"], ["lng", "-117.2610"], ["lat", "32.8571"], ["source_id", "22707"], ["created_at", "2016-05-06 01:45:33.270910"], ["updated_at", "2016-05-06 01:45:33.270910"]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 47], ["created_at", "2016-05-06 01:45:33.321039"], ["updated_at", "2016-05-06 01:45:33.321039"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 47], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.36"], ["updated_at", "2016-05-06 01:45:33.370615"], ["id", 47]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "22253"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "LaJolla Shores"], ["lng", "-117.2749"], ["lat", "32.8496"], ["source_id", "22253"], ["created_at", "2016-05-06 01:45:33.420905"], ["updated_at", "2016-05-06 01:45:33.420905"]]
+  [1m[35m (67.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 48], ["created_at", "2016-05-06 01:45:33.490849"], ["updated_at", "2016-05-06 01:45:33.490849"]]
+  [1m[36m (44.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 48], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.37"], ["updated_at", "2016-05-06 01:45:33.537333"], ["id", 48]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17097"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Boomers Beach"], ["lng", "-117.2752"], ["lat", "32.8499"], ["source_id", "17097"], ["created_at", "2016-05-06 01:45:33.587635"], ["updated_at", "2016-05-06 01:45:33.587635"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 49], ["created_at", "2016-05-06 01:45:33.637604"], ["updated_at", "2016-05-06 01:45:33.637604"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 49], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.40"], ["updated_at", "2016-05-06 01:45:33.687369"], ["id", 49]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21687"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "La Jolla Shores (La Jolla Canyon)"], ["lng", "-117.2623"], ["lat", "32.8573"], ["source_id", "21687"], ["created_at", "2016-05-06 01:45:33.737733"], ["updated_at", "2016-05-06 01:45:33.737733"]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 50], ["created_at", "2016-05-06 01:45:33.787609"], ["updated_at", "2016-05-06 01:45:33.787609"]]
+  [1m[36m (56.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 50], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "11.41"], ["updated_at", "2016-05-06 01:45:33.845754"], ["id", 50]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "22635"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Three Fingers"], ["lng", "-117.2798"], ["lat", "32.8527"], ["source_id", "22635"], ["created_at", "2016-05-06 01:45:33.887564"], ["updated_at", "2016-05-06 01:45:33.887564"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 51], ["created_at", "2016-05-06 01:45:33.937691"], ["updated_at", "2016-05-06 01:45:33.937691"]]
+  [1m[35m (31.1ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 51], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "11.71"], ["updated_at", "2016-05-06 01:45:33.970902"], ["id", 51]]
+  [1m[35m (47.3ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "21686"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Scripps Canyon"], ["lng", "-117.2526"], ["lat", "32.8759"], ["source_id", "21686"], ["created_at", "2016-05-06 01:45:34.020887"], ["updated_at", "2016-05-06 01:45:34.020887"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 52], ["created_at", "2016-05-06 01:45:34.071031"], ["updated_at", "2016-05-06 01:45:34.071031"]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 52], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "12.28"], ["updated_at", "2016-05-06 01:45:34.120747"], ["id", 52]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "23849"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Lazy Days Wreck"], ["lng", "-117.3486"], ["lat", "32.8569"], ["source_id", "23849"], ["created_at", "2016-05-06 01:45:34.170938"], ["updated_at", "2016-05-06 01:45:34.170938"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 53], ["created_at", "2016-05-06 01:45:34.221024"], ["updated_at", "2016-05-06 01:45:34.221024"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 53], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "14.62"], ["updated_at", "2016-05-06 01:45:34.270895"], ["id", 53]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18158"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "NOSC Tower wreck"], ["lng", "-117.1612"], ["lat", "32.4631"], ["source_id", "18158"], ["created_at", "2016-05-06 01:45:34.320907"], ["updated_at", "2016-05-06 01:45:34.320907"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 54], ["created_at", "2016-05-06 01:45:34.371066"], ["updated_at", "2016-05-06 01:45:34.371066"]]
+  [1m[36m (47.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 54], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "17.45"], ["updated_at", "2016-05-06 01:45:34.420611"], ["id", 54]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "18035"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Ruby. E Wreck"], ["lng", "-117.1660"], ["lat", "32.4603"], ["source_id", "18035"], ["created_at", "2016-05-06 01:45:34.470881"], ["updated_at", "2016-05-06 01:45:34.470881"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 55], ["created_at", "2016-05-06 01:45:34.521093"], ["updated_at", "2016-05-06 01:45:34.521093"]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 55], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "17.65"], ["updated_at", "2016-05-06 01:45:34.570642"], ["id", 55]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18307"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Los Coronados Island"], ["lng", "-117.3615"], ["lat", "32.5237"], ["source_id", "18307"], ["created_at", "2016-05-06 01:45:34.620940"], ["updated_at", "2016-05-06 01:45:34.620940"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 56], ["created_at", "2016-05-06 01:45:34.670988"], ["updated_at", "2016-05-06 01:45:34.670988"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 56], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "17.67"], ["updated_at", "2016-05-06 01:45:34.720751"], ["id", 56]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16470"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "15th Street Del Mar Beach"], ["lng", "-117.2688"], ["lat", "32.9590"], ["source_id", "16470"], ["created_at", "2016-05-06 01:45:34.771070"], ["updated_at", "2016-05-06 01:45:34.771070"]]
+  [1m[36m (61.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 57], ["created_at", "2016-05-06 01:45:34.835424"], ["updated_at", "2016-05-06 01:45:34.835424"]]
+  [1m[35m (57.1ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 57], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "17.94"], ["updated_at", "2016-05-06 01:45:34.894835"], ["id", 57]]
+  [1m[35m (57.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18134"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Pillbox Reef"], ["lng", "-117.2754"], ["lat", "32.9919"], ["source_id", "18134"], ["created_at", "2016-05-06 01:45:34.954310"], ["updated_at", "2016-05-06 01:45:34.954310"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 58], ["created_at", "2016-05-06 01:45:35.004435"], ["updated_at", "2016-05-06 01:45:35.004435"]]
+  [1m[36m (39.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.2ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 58], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "20.20"], ["updated_at", "2016-05-06 01:45:35.045731"], ["id", 58]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "16829"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Solana Beach"], ["lng", "-117.2847"], ["lat", "32.9900"], ["source_id", "16829"], ["created_at", "2016-05-06 01:45:35.096079"], ["updated_at", "2016-05-06 01:45:35.096079"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 59], ["created_at", "2016-05-06 01:45:35.146085"], ["updated_at", "2016-05-06 01:45:35.146085"]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 59], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "20.27"], ["updated_at", "2016-05-06 01:45:35.195691"], ["id", 59]]
+  [1m[35m (47.9ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "18323"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Little Solana Cove"], ["lng", "-117.2770"], ["lat", "32.9972"], ["source_id", "18323"], ["created_at", "2016-05-06 01:45:35.245996"], ["updated_at", "2016-05-06 01:45:35.245996"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 60], ["created_at", "2016-05-06 01:45:35.295994"], ["updated_at", "2016-05-06 01:45:35.295994"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 60], ["location_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "20.58"], ["updated_at", "2016-05-06 01:45:35.345815"], ["id", 60]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "22231"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Los Coronados"], ["lng", "-117.2952"], ["lat", "32.4339"], ["source_id", "22231"], ["created_at", "2016-05-06 01:45:35.395933"], ["updated_at", "2016-05-06 01:45:35.395933"]]
+  [1m[36m (47.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 61], ["created_at", "2016-05-06 01:45:35.446000"], ["updated_at", "2016-05-06 01:45:35.446000"]]
+  [1m[35m (47.8ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 61], ["location_id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "20.98"], ["updated_at", "2016-05-06 01:45:35.495656"], ["id", 61]]
+  [1m[35m (48.1ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "17249"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "Cardiff Reef"], ["lng", "-117.2818"], ["lat", "33.0147"], ["source_id", "17249"], ["created_at", "2016-05-06 01:45:35.546259"], ["updated_at", "2016-05-06 01:45:35.546259"]]
+  [1m[35m (47.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 62], ["created_at", "2016-05-06 01:45:35.595984"], ["updated_at", "2016-05-06 01:45:35.595984"]]
+  [1m[36m (47.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 62], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "21.81"], ["updated_at", "2016-05-06 01:45:35.645619"], ["id", 62]]
+  [1m[36m (48.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "21699"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Cardiff State Beach"], ["lng", "-117.2816"], ["lat", "33.0153"], ["source_id", "21699"], ["created_at", "2016-05-06 01:45:35.695891"], ["updated_at", "2016-05-06 01:45:35.695891"]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 63], ["created_at", "2016-05-06 01:45:35.746068"], ["updated_at", "2016-05-06 01:45:35.746068"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 63], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "21.85"], ["updated_at", "2016-05-06 01:45:35.795683"], ["id", 63]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.1ms)[0m  [1mSELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?[0m  [["source_id", "24573"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["site_name", "DiveSummit"], ["lng", "-117.5677"], ["lat", "32.6110"], ["source_id", "24573"], ["created_at", "2016-05-06 01:45:35.846093"], ["updated_at", "2016-05-06 01:45:35.846093"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["location_id", 1], ["divesite_id", 64], ["created_at", "2016-05-06 01:45:35.896071"], ["updated_at", "2016-05-06 01:45:35.896071"]]
+  [1m[36m (47.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesiteLocation Load (0.1ms)[0m  SELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1  [["divesite_id", 64], ["location_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?  [["distance", "24.73"], ["updated_at", "2016-05-06 01:45:35.945796"], ["id", 64]]
+  [1m[36m (48.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mDivesite Load (0.1ms)[0m  SELECT "divesites".* FROM "divesites" WHERE "divesites"."source_id" = ?  [["source_id", "17233"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "divesites" ("site_name", "lng", "lat", "source_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["site_name", "Stone Steps Beach"], ["lng", "-117.3013"], ["lat", "33.0546"], ["source_id", "17233"], ["created_at", "2016-05-06 01:45:35.996019"], ["updated_at", "2016-05-06 01:45:35.996019"]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "divesite_locations" ("location_id", "divesite_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["location_id", 1], ["divesite_id", 65], ["created_at", "2016-05-06 01:45:36.037766"], ["updated_at", "2016-05-06 01:45:36.037766"]]
+  [1m[35m (47.7ms)[0m  commit transaction
+  [1m[36mDivesiteLocation Load (0.1ms)[0m  [1mSELECT  "divesite_locations".* FROM "divesite_locations" WHERE "divesite_locations"."divesite_id" = ? AND "divesite_locations"."location_id" = ? LIMIT 1[0m  [["divesite_id", 65], ["location_id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "divesite_locations" SET "distance" = ?, "updated_at" = ? WHERE "divesite_locations"."id" = ?[0m  [["distance", "24.79"], ["updated_at", "2016-05-06 01:45:36.087472"], ["id", 65]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  [1m[36mDivesite Load (0.4ms)[0m  [1mSELECT "divesites".* FROM "divesites" INNER JOIN "divesite_locations" ON "divesites"."id" = "divesite_locations"."divesite_id" WHERE "divesite_locations"."location_id" = ?[0m  [["location_id", 1]]
+  Rendered divesites/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10917ms (Views: 39.3ms | ActiveRecord: 9654.1ms)
