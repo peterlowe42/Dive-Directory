@@ -3,9 +3,9 @@ class DivesitesController < ApplicationController
   
   def index
     if params[:location]
-      result = Geocoder.search(params[:location])
-      if result[0]
-        get_divesites
+      geo_data = Geocoder.search(params[:location])
+      if geo_data[0]
+        get_divesites(geo_data)
         build_marker_hash
       else
         flash[:error] = "Sorry we could not find that location"
@@ -24,9 +24,9 @@ class DivesitesController < ApplicationController
 
   private
 
-  def get_divesites
-    location = result[0].address
-    coords = result[0].coordinates
+  def get_divesites(geo_data)
+    location = geo_data[0].address
+    coords = geo_data[0].coordinates
     resp = HTTParty.get(generate_url(coords[0],coords[1])).to_json
     data_hash = JSON.parse(resp)
     @location = check_and_update_db(data_hash['sites'], location, @lat, @lng)
