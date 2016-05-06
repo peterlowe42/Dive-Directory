@@ -1,38 +1,7 @@
 
 <div class= "container-fluid">
-
-
   <% if @location %>
-    <!-- <div  class="row"> -->
-      <div id="site-div" class="col-md-3 pre-scrollable text-center bs-docs-sidebar span3" >
-        <h2>Dive Sites Near</h2>
-        <h3><%=@location.name%></h3>
-        <ul class="site-list" >
-          <% @divesites.each do |divesite| %>
-            <li>
-              <h3><a href="/divesites/<%= divesite.id %>"><%= divesite.site_name %></a></h3>
-              <h4>Coordinates:</h4>
-              <p>Latitude: <%=divesite.lat%> </p>
-              <p>Longitude: <%=divesite.lng%> </p>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-      <div id="map-container" class="col-md-9 fixed">
-        <div id="map"></div>
-      </div><!--close map-container-->
-    <!-- </div><!--close row--> -->
-    <script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {
-        scrollwheel: false
-      }, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers(<%=raw @hash.to_json %>);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-    </script>
-
+    <%= render partial:"site_list" %>
   <% else %>
     <div class="jumbotron text-center">
       <%= image_tag ('logoinverse'), id: 'jumbo-logo' %>
