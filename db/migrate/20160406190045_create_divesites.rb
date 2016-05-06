@@ -7,6 +7,7 @@ class CreateDivesites < ActiveRecord::Migration
       t.string :source_id
       t.integer :max_depth
       t.integer :min_depth
+      t.text :description
       
       t.timestamps null: false
     end

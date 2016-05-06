@@ -1,0 +1,13 @@
+<div class="col-md-6 panel panel-default">
+  <div class="panel-heading">
+    <h2>Account Details</h2>
+  </div>
+  <div class="panel-body">
+    <span><strong>First name:</strong> <%= @user.first_name %> </span><br>
+        <span><strong>Last name:</strong> <%= @user.last_name %> </span><br>
+        <span><strong>User name:</strong> <%= @user.username %> </span><br>
+        <span><strong>Email:</strong> <%= @user.email %> </span><br>
+        <span><strong>Unit preference:</strong> <%= @user.units %> </span><br>
+  </div>
+  <%= link_to "Edit", edit_user_path(@user) %>
+</div>

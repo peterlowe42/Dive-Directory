@@ -1,1 +1,47 @@
-show.html.haml
+<div class= "container">
+  <div class"page-header">
+  </div>
+  <div class="row">
+    <div class="panel panel-default col-md-4 site-data">
+      <div class="panel-heading"> <h2><%= @divesite.site_name %></h2> </div>
+      <div class="panel-body">
+        <span><strong>Latitude:</strong> <%= @divesite.lat %> </span><br>
+        <span><strong>Longitude:</strong> <%= @divesite.lng %> </span><br>
+        <span><strong>Max Depth:</strong> <%= @divesite.max_depth %> </span><br>
+        <span><strong>Min Depth:</strong> <%= @divesite.min_depth %> </span><br>
+        <span><strong>Description:</strong> <%= @divesite.description %> </span><br>
+      </div>
+    </div>
+    <div class="panel panel-default col-md-6 small-map">
+      <div id="map-small"></div>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="panel panel-default col-md-12">
+      <div class="panel-heading" style="margin-bottom:2em">
+       <h2>Reviews</h2> 
+      </div>
+      <% if @divesite.reviews == [] %>
+        <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
+      <% else %>
+        <% @divesite.reviews.each do |review| %>
+          <%= render :partial => 'reviews/show', locals:{ review: review }  %>
+        <% end %>
+            <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
+      <% end %>
+
+    </div>
+  </div>  
+
+</div>
+<script type="text/javascript">
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {
+   scrollwheel: false,
+  zoom:10
+}, internal: {id: 'map-small'}}, function(){
+  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+  handler.map.centerOn({ lat: <%= @divesite.lat %>, lng: <%= @divesite.lng %> })
+});
+</script>
