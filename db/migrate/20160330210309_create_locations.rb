@@ -4,8 +4,8 @@ class CreateLocations < ActiveRecord::Migration
       t.string :name
       t.string :lat 
       t.string :lng
-      
-      t.timestamps
+
+      t.timestamps null: false
     end
   end
 end

@@ -1,15 +1,37 @@
 body {
   padding-top: 60px;
+  background-color: #585B66;
+}
+
+footer {
+  position: absolute;
+  padding-left: 2em;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #101010;
+}
+
+#nav-logo {
+  width: 4em;
+  margin-top: -.6em;
+}
+
+#jumbo-logo {
+  width:18em;
+  -webkit-filter: invert(100%);
+    filter: invert(100%);
 }
 
 #site-div {
- min-height:650px;
-  background-color: #0E417F;
+  color: #C0C8D1;
+  min-height:62em;
+  background-color: #041E38;
 }
 
 #map {
   width: 100%;
-  height: 650px;
+  height: 62em;
 }
 
 #map-small {
@@ -17,12 +39,19 @@ body {
   height: 300px;
 }
 
+#flash-messages {
+  width:60em;
+  margin-left:1em;
+}
+
 .site-data {
+  margin-right: 2em;
   height: 300px;
 }
 
 .site-list {
   list-style: none;
+  margin-left: -3em;
 }
 
 

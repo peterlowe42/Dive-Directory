@@ -7,7 +7,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      @message = "Congratulations You've registered"
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       @errors = @user.errors.full_messages
       render "new"
@@ -15,16 +17,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    if session[:user_id] == params[:id].to_i
-     @user = User.find_by(session[:user_id])
-    else
-     redirect_to login_path
+    @user = current_user
+    if @user.nil?
+      redirect_to login_path
     end
+  end
+
+  def edit
+    @user = current_user
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :username, :password, :password_confirmation, :first_name, :last_name)
+    params.require(:user).permit(:email, :username, :password, :password_confirmation, :first_name, :last_name, :units)
   end
 end
