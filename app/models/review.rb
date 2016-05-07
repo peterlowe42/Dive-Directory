@@ -4,6 +4,9 @@ class Review < ActiveRecord::Base
   belongs_to :user
   belongs_to :divesite
   has_many :votes, as: :votable
+  validates :title, :rating, :body, :vis, :temp, :current, presence: :true 
+  validates :dive_date, presence: true
+
 
 
   def convert_units

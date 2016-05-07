@@ -14,13 +14,14 @@ class ReviewsController < ApplicationController
   def create
     @divesite = Divesite.find(params[:divesite_id])
     @user = current_user
-    review = Review.new(review_params)
-    review.user = @user
-    review.convert_units if @user.units == "Imperial"
-    if review.save
+    @review = Review.new(review_params)
+    @review.user = @user
+    @review.convert_units if @user.units == "Imperial"
+    if @review.save
       @divesite.reviews << review
       redirect_to divesite_path(@divesite)
     else
+      @errors = @review.errors.full_messages
       render 'new'
     end
   end

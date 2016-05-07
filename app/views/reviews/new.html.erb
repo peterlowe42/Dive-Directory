@@ -1,6 +1,8 @@
 <div class="container">
   <% if @errors %>
-  <%= @errors %>
+  <div class="alert alert-danger" role="alert">
+    <%= @errors %>
+  </div>
   <% end %>
   <h1>Post Review</h1>
 

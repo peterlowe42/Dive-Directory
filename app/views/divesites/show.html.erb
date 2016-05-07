@@ -3,7 +3,7 @@
   </div>
   <div class="row">
     <div class="panel panel-default col-md-4 site-data">
-      <div class="panel-heading"> <h2><%= @divesite.site_name %></h2> </div>
+      <div class="panel-heading text-center"> <h2><%= @divesite.site_name %></h2> </div>
       <div class="panel-body">
         <span><strong>Latitude:</strong> <%= @divesite.lat %> </span><br>
         <span><strong>Longitude:</strong> <%= @divesite.lng %> </span><br>
@@ -15,19 +15,20 @@
   </div>
   
   <div class="row">
-    <div class="panel panel-default col-md-12">
-      <div class="panel-heading" style="margin-bottom:2em">
+    <div class="panel panel-default col-md-12 review-div">
+      <div class="panel-heading" >
        <h2>Reviews</h2> 
       </div>
-      <% if @divesite.reviews == [] %>
-        <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
-      <% else %>
-        <% @divesite.reviews.each do |review| %>
-          <%= render :partial => 'reviews/show', locals:{ review: review }  %>
+      <div class="panel-body">
+        <% if @divesite.reviews == [] %>
+          <%= link_to 'Be the first to review this Divesite', new_divesite_review_path(@divesite) %>
+        <% else %>
+          <% @divesite.reviews.each do |review| %>
+            <%= render :partial => 'reviews/show', locals:{ review: review }  %>
+          <% end %>
+              <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
         <% end %>
-            <%= link_to 'Add Review', new_divesite_review_path(@divesite), { :class=> "btn btn-primary" } %>
-      <% end %>
-
+      </div>
     </div>
   </div>  
 

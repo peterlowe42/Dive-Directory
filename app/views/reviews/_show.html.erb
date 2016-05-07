@@ -5,7 +5,6 @@
   <p>Rating: <%= review.rating %> </p>
 </div>
 <div class="col-md-9 panel panel-default">
-  <h4> <%= review.title %> </h4>
   <span><strong>Visibility:</strong>
     <% if current_user && current_user.units == 'Imperial' %>
       <%= (review.vis * 3.28084).round(0) %> ft
@@ -23,6 +22,7 @@
   <span>
     <strong>Current:</strong><%= review.current %>
   </span><br>
+  <h4> <%= review.title %> </h4>
   <span> <%= review.body %> </span><br>
   <% if current_user == review.user %>
   <%= link_to 'Edit', edit_divesite_review_path(@divesite, review) %>
