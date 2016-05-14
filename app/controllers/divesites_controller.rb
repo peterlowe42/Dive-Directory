@@ -7,10 +7,14 @@ class DivesitesController < ApplicationController
       if geo_data[0]
         get_divesites(geo_data)
         build_marker_hash
-        render partial:"site_list", layout: false 
+        if request.xhr?
+          render partial:"site_list", layout: false 
+        end
       else
         flash[:error] = "Sorry we could not find that location"
-        render 'welcome/index', layout: false
+        if request.xhr?
+          render 'welcome/index', layout: false
+        end  
       end
     end
   end

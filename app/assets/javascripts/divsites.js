@@ -13,7 +13,8 @@ $( document ).ready(function() {
     		data: data
     	}).done(function(response){
             $("#loading-message").hide()
-    		$("#content").html(response)
-    	})
-    	});
+            console.log(response)
+            $("#content").html(response)
+        })
+    });
 });

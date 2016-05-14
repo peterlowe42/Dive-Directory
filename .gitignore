@@ -1,4 +1,6 @@
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp/*
-/db/*.sqlite3
+log/*.log
+tmp/*
+.sqlite3
+.DS_Store
+.byebug_history
