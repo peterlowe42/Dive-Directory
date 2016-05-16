@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".navbar-form").submit(function(e){e.preventDefault(),$("#welcome").hide(),$("#loading-message").show();var t=$(this).attr("action"),a=$(this).serialize();$.ajax({url:t,method:"get",data:a}).done(function(e){$("#loading-message").hide(),$("#content").html(e)})})});
