@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20160406190045) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "divesite_locations", force: :cascade do |t|
     t.integer  "divesite_id"
     t.integer  "location_id"
