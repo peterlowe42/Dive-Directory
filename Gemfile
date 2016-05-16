@@ -36,6 +36,8 @@ gem 'sidekiq'
 
 gem 'puma'
 
+gem 'aws-sdk-rails', '~> 1.0'
+
 group :production do 
   gem 'unicorn'
 
