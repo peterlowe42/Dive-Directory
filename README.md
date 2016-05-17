@@ -11,4 +11,3 @@ Dive Directory is an open scource web app for SCUBA divers to find and review di
 
  A user can add a review to a divesite
 
- A user can vote on a review (once per review)
